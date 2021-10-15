@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cmobile</title>
+    
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Cmobile</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            
+              <a class="nav-link" href="/busqueda">Buscar</a>
+              <a class="nav-link" href="/comparador">Comparar</a>
+              <a class="nav-link" href="/mapa">Mapa</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+</header>
+
+
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-4 col-md-8 mx-auto">
+            <h1 class="fw-light">Comparador</h1><br>
+                <form action="/comparador" method="POST">
+                    <div class="d-flex justify-content-evenly">
+
+                        <label for="movil1" class="form-label">Nombre
+                        <select class="form-select" type="search" name="nombre1" required> 
+                            <option value="">Elige...</option>
+                            <option>Móvil - Xiaomi Redmi Note 10 Pro</option> <option>Móvil - Xiaomi Redmi Note 10</option>            <option>Móvil - Xiaomi Redmi 9</option>            <option>Móvil - Xiaomi Redmi Note 10 5G</option>            <option>Móvil - Xiaomi Redmi Note 9</option>            <option>Móvil - Xiaomi Redmi 9A</option>            <option>Móvil - Xiaomi MI 10 T</option>            <option>Móvil - Samsung Galaxy A02s</option>            <option>Móvil - Samsung Galaxy A12</option> <option>Móvil - Samsung Galaxy A32</option>            <option>Móvil - Samsung Galaxy A51</option>            <option>Móvil - Samsung Galaxy S20 FE 4G</option>            <option>Móvil - Samsung Galaxy A22 5G</option>            <option>Móvil - OPPO Find X3 Pro</option>            <option>Móvil - Oppo A53s</option>            <option>Móvil - OPPO A15</option>
+                            <option>Móvil - OPPO Find X2</option> <option>Móvil - OPPO A72</option> <option>Móvil - Oppo A53</option>            <option>Móvil - OPPO A73 5G</option>            <option>Móvil - OPPO Reno 4 Pro 5G</option><option>Móvil - OPPO A94 5G</option><option>Móvil - OPPO Reno 4 5G</option><option>Móvil - realme 8 5G</option>            <option>Móvil - realme 8</option> <option>Móvil - realme C21</option> <option>Móvil - realme 7i</option><option>Móvil - realme 8 Pro</option>            <option>Móvil - realme 7 Pro</option><option>Móvil - realme X50 Pro</option><option>Móvil - Huawei P40 LITE 4G</option><option>Móvil - Huawei P Smart 2021</option>
+                            <option>Móvil - Huawei Y5p</option> <option>Móvil - Huawei Mate 40 Pro 5G</option><option>Móvil - Huawei P40 Lite 5G</option><option>Móvil - Huawei P40 Lite E</option>
+                        </select> 
+                        </label>
+                        
+                        <label for="movil2" class="form-label">Nombre
+                        <select class="form-select"  type="search" name="nombre2" required>
+                            <option value="">Elige...</option>
+                            <option>Móvil - Xiaomi Redmi Note 10 Pro</option> <option>Móvil - Xiaomi Redmi Note 10</option>            <option>Móvil - Xiaomi Redmi 9</option>            <option>Móvil - Xiaomi Redmi Note 10 5G</option>            <option>Móvil - Xiaomi Redmi Note 9</option>            <option>Móvil - Xiaomi Redmi 9A</option>            <option>Móvil - Xiaomi MI 10 T</option>            <option>Móvil - Samsung Galaxy A02s</option>            <option>Móvil - Samsung Galaxy A12</option> <option>Móvil - Samsung Galaxy A32</option>            <option>Móvil - Samsung Galaxy A51</option>            <option>Móvil - Samsung Galaxy S20 FE 4G</option>            <option>Móvil - Samsung Galaxy A22 5G</option>            <option>Móvil - OPPO Find X3 Pro</option>            <option>Móvil - Oppo A53s</option>            <option>Móvil - OPPO A15</option>
+                            <option>Móvil - OPPO Find X2</option> <option>Móvil - OPPO A72</option> <option>Móvil - Oppo A53</option>            <option>Móvil - OPPO A73 5G</option>            <option>Móvil - OPPO Reno 4 Pro 5G</option><option>Móvil - OPPO A94 5G</option><option>Móvil - OPPO Reno 4 5G</option><option>Móvil - realme 8 5G</option>            <option>Móvil - realme 8</option> <option>Móvil - realme C21</option> <option>Móvil - realme 7i</option><option>Móvil - realme 8 Pro</option>            <option>Móvil - realme 7 Pro</option><option>Móvil - realme X50 Pro</option><option>Móvil - Huawei P40 LITE 4G</option><option>Móvil - Huawei P Smart 2021</option>
+                            <option>Móvil - Huawei Y5p</option> <option>Móvil - Huawei Mate 40 Pro 5G</option><option>Móvil - Huawei P40 Lite 5G</option><option>Móvil - Huawei P40 Lite E</option>
+                        </select>
+                        </label>
+                    
+                    </div>
+                        <button type="submit" class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                        </svg>
+                            Buscar
+                        </button>
+                </form>
+            
+        </div>
+    </div>
+</section>
+
+<div class = "album py-5 bg-light">
+    <div class = "container">
+        <div class = "row justify-content-evenly">
+            {% if datos1 %}
+            <div class = "col-md-4">
+                <div class = "card mb-4 box-shadow">
+                    <img class = "card-img-top " src = {{ datos1.10 }} style="height: 78%; width: 58%; display: block;">
+                    <div class="card-body">    
+                        <p class="fw-bold fs-5">{{ datos1.0 }}</p>
+                            <p class="card-text text-muted fs-6">
+                                Color: {{ datos1.1 }} <br> Almacenamiento: {{ datos1.2 }} GB <br>RAM: {{ datos1.3 }} GB<br> Pantalla: {{ datos1.4 }} <br>
+                                Procesador: {{ datos1.5 }} <br> Batería: {{ datos1.6 }} <br> S.O: {{ datos1.7 }}
+                            </p>
+                        <p class="fw-bold fs-5">{{ datos1.8 }}€</p>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                                
+                        <button type = "button" class="btn btn-outline-danger">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" heigh="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+                                <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"></path>
+                                <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"></path>
+                            </svg>
+                            <a class="text-muted fw-bold text-decoration-none" href= {{ datos1.9 }}>MediaMarkt</a>
+                        </button>
+                    </div>
+                </div>
+            </div> 
+        </div>   
+        {% endif %}
+        {% if datos2 %}
+        <div class = "col-md-4">
+            <div class = "card mb-4 box-shadow">
+                <img class = "card-img-top " src = {{ datos2.10}} style="height: 78%; width: 58%; display: block;">
+                <div class="card-body">    
+                    <p class="fw-bold fs-5">{{ datos2.0 }}</p>
+                        <p class="card-text text-muted fs-6">
+                            Color: {{ datos2.1 }} <br> Almacenamiento: {{ datos2.2 }} GB <br>RAM: {{ datos2.3 }} GB<br> Pantalla: {{ datos2.4 }} <br>
+                            Procesador: {{ datos2.5 }} <br> Batería: {{ datos2.6 }} <br> S.O: {{ datos2.7 }}
+                        </p>
+                    <p class="fw-bold fs-5">{{ datos2.8 }}€</p>
+
+                <div class="d-flex justify-content-between align-items-center">
+                            
+                    <button type = "button" class="btn btn-outline-danger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" heigh="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+                            <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"></path>
+                            <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"></path>
+                        </svg>
+                        <a class="text-muted fw-bold text-decoration-none" href= {{ datos2.9 }}>MediaMarkt</a>
+                    </button>
+                </div>
+            </div>
+        </div> 
+    </div>   
+    {% endif %}
+   
+</div>
+</div>
+</div>
+
+<footer class="text-muted py-5">
+    <div class="container">
+  
+      <p class="float-end mb-1">
+        <a href="#">Volver al inicio</a>
+      </p>
+  
+      <p class="mb-1">
+        Francisco Lara Marín <br>
+        Daniel Maldonado Jerónimo
+  
+      </p>
+    </div>
+  </footer>
+  
+  </body>
+  </html>

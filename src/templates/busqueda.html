@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cmobile</title>
+   
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+
+<body>
+<header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Cmobile</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            
+              <a class="nav-link" href="/busqueda">Buscar</a>
+              <a class="nav-link" href="/comparador">Comparar</a>
+              <a class="nav-link" href="/mapa">Mapa</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-4 col-md-8 mx-auto">
+            <h1 class="fw-light">Buscador</h1><br>
+            <form action="/busqueda" method="POST">
+
+                <label for="Brand" class="form-label">Marca</label>
+                <input class="form-select" type="search" name="marca" list="listamarcas"><br>
+
+                <label for="rangeFormPrice" class="form-label">Rango de precio</label>
+                <input class="form-control mb-2 mr-sm-2" type="number" name="preciomin" value="0" min="0" max="3000"> 
+                <input class="form-control mb-2 mr-sm-2" type="number" name="preciomax" value="2999" min="0" max="3000">
+                <br>
+
+                <label for="rangeFormRam class="form-label">Tamaño RAM</label>
+                <input class="form-control mb-2 mr-sm-2" type="number" name="rammin" value="1" min="1" max="12"> 
+                <input class="form-control mb-2 mr-sm-2" type="number" name="rammax" value="12" min="1" max="12">
+                <br>
+
+                <label for="rangeFormMemory class="form-label">Memoria</label>
+                <input class="form-control mb-2 mr-sm-2" type="number" name="memoriamin" value="8" min="8" max="512"> 
+                <input class="form-control mb-2 mr-sm-2" type="number" name="memoriamax" value="511" min="8" max="512">
+ 
+                <button type="submit" class="btn btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                    </svg>
+                    Buscar
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+    <div class = "album py-5 bg-light">
+        <div class = "container">
+            <div class = "row">
+            {% for movil in moviles %}
+                <div class = "col-md-4">
+                    <div class = "card mb-4 box-shadow">
+                        <img class = "card-img-top " src = {{ movil.10}} style="height: 78%; width: 58%; display: block;">
+                        <div class="card-body">
+                            <p class="fw-bold fs-5">{{ movil.0 }}</p>
+                            <p class="card-text text-muted fs-6">
+                                 Color: {{ movil.1 }} <br> Almacenamiento: {{ movil.2 }} GB <br>RAM: {{ movil.3 }} GB<br> Pantalla: {{ movil.4 }} <br>
+                                Procesador: {{ movil.5 }} <br> Batería: {{ movil.6 }} <br> S.O: {{ movil.7 }}
+                            </p>
+                            <p class="fw-bold fs-5">{{ movil.8 }}€</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                
+                                <button type = "button" class="btn btn-outline-danger">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" heigh="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+                                        <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"></path>
+                                        <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"></path>
+                                    </svg>
+                                    <a class="text-muted fw-bold text-decoration-none" href= {{ movil.9 }}>MediaMarkt</a>
+                                </button>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                
+       
+            {%endfor%}
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-muted py-5">
+        <div class="container">
+      
+          <p class="float-end mb-1">
+            <a href="#">Volver al inicio</a>
+          </p>
+      
+          <p class="mb-1">
+            Francisco Lara Marín <br>
+            Daniel Maldonado Jerónimo
+      
+          </p>
+        </div>
+      </footer>
+      
+      </body>
+      </html>
+
+<datalist id="listamarcas">
+    <option>Samsung</option>
+    <option>Xiaomi</option>
+    <option>Oppo</option>
+    <option>Realme</option>
+    <option>Huawei</option>
+</datalist>
